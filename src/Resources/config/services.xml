@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="onesignal.guzzle" class="GuzzleHttp\Client" public="false"/>
+
+        <service id="onesignal.config" class="OneSignal\Config" public="false">
+            <call method="setApplicationId">
+                <argument>%adelplace_one_signal.application_id%</argument>
+            </call>
+            <call method="setApplicationAuthKey">
+                <argument>%adelplace_one_signal.application_auth_key%</argument>
+            </call>
+            <call method="setUserAuthKey">
+                <argument>%adelplace_one_signal.user_auth_key%</argument>
+            </call>
+        </service>
+
+        <service id="onesignal.api" class="OneSignal\OneSignal" public="true">
+            <argument type="service" id="onesignal.config"/>
+            <argument type="service" id="onesignal.guzzle"/>
+        </service>
+    </services>
+</container>

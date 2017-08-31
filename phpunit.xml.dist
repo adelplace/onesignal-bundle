@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.4/phpunit.xsd"
+         bootstrap="tests/Fixtures/app/bootstrap.php"
+         colors="true"
+         verbose="true">
+
+    <php>
+        <server name="KERNEL_DIR" value="tests/Fixtures/app/" />
+    </php>
+
+    <testsuites>
+        <testsuite name="AdelplaceOneSignal Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory>./</directory>
+            <exclude>
+                <directory>fixtures</directory>
+                <directory>vendor</directory>
+                <directory>tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+</phpunit>
