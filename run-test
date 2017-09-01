@@ -3,4 +3,5 @@
 if [[ "$(docker images -q onesignal 2> /dev/null)" == "" ]]; then
     docker build -t onesignal .
 fi
+docker run -it --rm --name my-running-script -v "$PWD":/var/www -w /var/www onesignal composer install
 docker run -it --rm --name my-running-script -v "$PWD":/var/www -w /var/www onesignal php vendor/bin/simple-phpunit

@@ -20,8 +20,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  */
 class AdelplaceOneSignalExtension extends Extension
 {
-    const SERVICES_DIR = __DIR__.'/../resources/config';
-
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
