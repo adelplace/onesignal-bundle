@@ -20,8 +20,7 @@
     ],
     "autoload": {
         "classmap": [
-            "src",
-            "vendor/norkunas/onesignal-php-api/src"
+            "src"
         ]
     },
     "autoload-dev": {
