@@ -6,6 +6,14 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="onesignal.guzzle" class="GuzzleHttp\Client" public="false"/>
+        <service id="onesignal.guzzle_message_factory" class="Http\Message\MessageFactory\GuzzleMessageFactory" public="false"/>
+        <service id="onesignal.guzzle_adapter" class="Http\Adapter\Guzzle6\Client" public="false">
+            <argument type="service" id="onesignal.guzzle"/>
+        </service>
+        <service id="onesignal.http_client" class="Http\Client\Common\HttpMethodsClient" public="false">
+            <argument type="service" id="onesignal.guzzle_adapter"/>
+            <argument type="service" id="onesignal.guzzle_message_factory"/>
+        </service>
 
         <service id="onesignal.config" class="OneSignal\Config" public="false">
             <call method="setApplicationId">
@@ -21,7 +29,7 @@
 
         <service id="onesignal.api" class="OneSignal\OneSignal" public="true">
             <argument type="service" id="onesignal.config"/>
-            <argument type="service" id="onesignal.guzzle"/>
+            <argument type="service" id="onesignal.http_client"/>
         </service>
     </services>
 </container>
