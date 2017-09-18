@@ -47,12 +47,4 @@ class AdelplaceOneSignalExtensionTest extends KernelTestCase
 
         $this->assertEquals($expectedConfig, $this->container->get('onesignal.api')->getConfig());
     }
-
-    /**
-     * @expectedException OneSignal\Exception\OneSignalException
-     */
-    public function testLibraryRequest()
-    {
-        $this->container->get('onesignal.api')->apps->getAll();
-    }
 }

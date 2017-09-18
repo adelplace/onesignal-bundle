@@ -1,4 +1,4 @@
-# Adelplace/OneSignalBundle
+# OneSignal API for Symfony
 
 Symfony integration of the norkunas/onesignal-php-api library
 
@@ -12,7 +12,7 @@ Just require the bundle with composer
 composer require adelplace/onesignalbundle
 ```
 
-now add the following line to your app/AppKernel.php
+Then add the following line to your app/AppKernel.php
 ```php
 public function registerBundles()
 {
@@ -23,17 +23,26 @@ public function registerBundles()
 }
 ```
 
-
-
 ### Configuration
 
 Add the following lines to your config.yml
 ```
-onesignal:
+adelplace_one_signal:
     application_id: 'my application id'
-    application_auth_key: 'my application auth id'
+    application_auth_key: 'my application auth key'
     user_auth_key: 'my user auth key'
 ```
+
+### Usage
+
+To use the api service you just need to call 'onesignal.api' in the container
+```php
+$api = $this->get('onesignal.api');
+$api->notifications->getAll();
+...
+```
+
+For more informations look at the [norkunas/onesignal-php-api documentation](https://github.com/norkunas/onesignal-php-api/blob/master/docs/getting-started.md)
 
 ## Contributing
 
@@ -52,4 +61,4 @@ Please make sure you have docker installed on your host. Then just run
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
