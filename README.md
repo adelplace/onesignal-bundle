@@ -9,7 +9,7 @@ Symfony integration of the norkunas/onesignal-php-api library
 Just require the bundle with composer
 
 ```
-composer require adelplace/onesignalbundle
+composer require adelplace/onesignal-bundle
 ```
 
 Then add the following line to your app/AppKernel.php
