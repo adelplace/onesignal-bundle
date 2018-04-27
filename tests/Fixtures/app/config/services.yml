@@ -1,0 +1,8 @@
+services:
+    onesignal.guzzle_adapter:
+        class: Http\Adapter\Guzzle6\Client
+        arguments:
+            - '@guzzle_client'
+
+    guzzle_client:
+        class: GuzzleHttp\Client

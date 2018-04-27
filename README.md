@@ -1,6 +1,6 @@
 # OneSignal API for Symfony
 
-Symfony integration of the norkunas/onesignal-php-api library
+Symfony integration of the [norkunas/onesignal-php-api](https://github.com/norkunas/onesignal-php-api) library
 
 ## Getting Started
 
@@ -26,11 +26,45 @@ public function registerBundles()
 ### Configuration
 
 Add the following lines to your config.yml
-```
+```yaml
 adelplace_one_signal:
     application_id: 'my application id'
     application_auth_key: 'my application auth key'
     user_auth_key: 'my user auth key'
+```
+
+Then configure the guzzle client
+
+#### For Guzzle5
+Require the corresponding adapter
+```
+composer require php-http/guzzle5-adapter
+```
+Add the services
+```yaml
+onesignal.guzzle_adapter:
+    class: Http\Adapter\Guzzle5\Client
+    arguments:
+        - '@guzzle_client'
+
+guzzle_client:
+    class: GuzzleHttp\Client
+```
+#### For Guzzle6
+
+Require the corresponding adapter
+```
+composer require php-http/guzzle6-adapter
+```
+Add the services
+```yaml
+onesignal.guzzle_adapter:
+    class: Http\Adapter\Guzzle6\Client
+    arguments:
+        - '@guzzle_client'
+
+guzzle_client:
+    class: GuzzleHttp\Client
 ```
 
 ### Usage
