@@ -3,10 +3,10 @@
     "description": "Symfony integration of the norkunas/onesignal-php-api library",
     "type": "library",
     "require": {
-        "symfony/symfony": "~2.7|^3.0|^4.0",
-        "guzzlehttp/guzzle": "^6.0",
-        "norkunas/onesignal-php-api": "1.0",
-        "php-http/guzzle6-adapter": "^1.0"
+        "symfony/dependency-injection": "^2.7 || ^3.0 || ^4.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "php-http/guzzle6-adapter": "^1.1",
+        "norkunas/onesignal-php-api": "^1.2"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.3"
