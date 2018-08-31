@@ -1,7 +1,7 @@
 {
     "name": "adelplace/onesignal-bundle",
     "description": "Symfony integration of the norkunas/onesignal-php-api library",
-    "type": "library",
+    "type": "symfony-bundle",
     "require": {
         "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
         "guzzlehttp/guzzle": "^6.3",
