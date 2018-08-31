@@ -10,7 +10,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="AdelplaceOneSignal Test Suite">
+        <testsuite name="Adelplace OneSignal Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

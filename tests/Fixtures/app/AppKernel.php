@@ -19,7 +19,7 @@ class AppKernel extends Kernel
     {
         return [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Adelplace\OneSignalBundle\AdelplaceOneSignalBundle()
+            new Adelplace\OneSignalBundle\OneSignalBundle()
         ];
     }
     public function registerContainerConfiguration(LoaderInterface $loader)

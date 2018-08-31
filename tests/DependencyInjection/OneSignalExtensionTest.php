@@ -19,7 +19,7 @@ use Symfony\Component\HttpKernel\Kernel;
 /**
  * @author Alexandre Delplace alexandre.delplacemille@gmail.com
  */
-class AdelplaceOneSignalExtensionTest extends KernelTestCase
+class OneSignalExtensionTest extends KernelTestCase
 {
     /**
      * @var ContainerInterface

@@ -18,7 +18,7 @@ public function registerBundles()
 {
     return [
         ...
-        new Adelplace\OneSignalBundle\AdelplaceOneSignalBundle()
+        new Adelplace\OneSignalBundle\OneSignalBundle()
     ];
 }
 ```
@@ -58,6 +58,7 @@ Please make sure you have docker installed on your host. Then just run
 ## Authors
 
 * **Alexandre Delplace** - *Initial work* - [Adelplace](https://github.com/adelplace)
+* **Daniel Stancu** - *Updates & Maintenance* - [birkof](https://github.com/birkof)
 
 ## License
 
