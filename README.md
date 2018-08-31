@@ -44,13 +44,13 @@ $api->notifications->getAll();
 ...
 ```
 
-For more informations look at the [norkunas/onesignal-php-api documentation](https://github.com/norkunas/onesignal-php-api/blob/master/docs/getting-started.md)
+For more information look at the [norkunas/onesignal-php-api documentation](https://github.com/norkunas/onesignal-php-api/blob/master/docs/getting-started.md)
 
 ## Contributing
 
 Feel free to contribute if you have any idea to improve this project.
 
-### Testing
+### Testing [broken]
 
 Please make sure you have docker installed on your host. Then just run
 ```
