@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  **/
 
-namespace Adelplace\DependencyInjection\OneSignalBundle;
+namespace Adelplace\OneSignalBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
