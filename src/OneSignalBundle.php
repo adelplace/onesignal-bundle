@@ -17,6 +17,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class OneSignalBundle extends Bundle
 {
+    const VERSION = '1.2.2';
+    const ALIAS = 'adelplace_one_signal';
+
     public function getContainerExtension()
     {
         return new OneSignalExtension();
