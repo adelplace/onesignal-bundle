@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 /**
  * @author Alexandre Delplace alexandre.delplacemille@gmail.com
  */
-class AdelplaceOneSignalExtension extends Extension
+class OneSignalExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {

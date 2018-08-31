@@ -10,6 +10,7 @@
 namespace Adelplace\OneSignalBundle;
 
 use Adelplace\OneSignalBundle\DependencyInjection\AdelplaceOneSignalExtension;
+use Adelplace\OneSignalBundle\DependencyInjection\OneSignalExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -19,6 +20,6 @@ class OneSignalBundle extends Bundle
 {
     public function getContainerExtension()
     {
-        return new AdelplaceOneSignalExtension();
+        return new OneSignalExtension();
     }
 }
