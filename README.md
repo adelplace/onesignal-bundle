@@ -6,18 +6,20 @@ Symfony integration of the norkunas/onesignal-php-api library
 
 ### Installing
 
-Just require the bundle with composer
+You just require using composer and you're good to go!
+````bash
+composer require birkof/onesignal-bundle
+````
 
-```
-composer require adelplace/onesignal-bundle
-```
+If you don't use Flex, you need to manually enable bundle in your kernel:
 
-Then add the following line to your app/AppKernel.php
-```php
+```$php
+<?php
+// app/AppKernel.php
 public function registerBundles()
 {
-    return [
-        ...
+    $bundles = [
+        // ...
         new Adelplace\OneSignalBundle\OneSignalBundle()
     ];
 }
