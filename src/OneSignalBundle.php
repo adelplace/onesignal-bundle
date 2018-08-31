@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
  * @author Alexandre Delplace alexandre.delplacemille@gmail.com
  */
-class AdelplaceOneSignalBundle extends Bundle
+class OneSignalBundle extends Bundle
 {
     public function getContainerExtension()
     {
