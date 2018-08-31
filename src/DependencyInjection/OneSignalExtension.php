@@ -9,7 +9,6 @@
 
 namespace Adelplace\OneSignalBundle\DependencyInjection;
 
-use Adelplace\DependencyInjection\OneSignalBundle\Configuration;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
