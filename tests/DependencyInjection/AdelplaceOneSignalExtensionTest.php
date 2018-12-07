@@ -11,31 +11,22 @@ namespace Adelplace\OneSignalBundle\Tests\DependencyInjection;
 
 use OneSignal\Config;
 use OneSignal\OneSignal;
-use PHPUnit\Framework\TestCase;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Kernel;
 
 /**
  * @author Alexandre Delplace alexandre.delplacemille@gmail.com
  */
-class AdelplaceOneSignalExtensionTest extends KernelTestCase
+class AdelplaceOneSignalExtensionTest extends WebTestCase
 {
-    /**
-     * @var ContainerInterface
-     */
-    private $container;
-
     public function setUp()
     {
         self::bootKernel();
-
-        $this->container = self::$kernel->getContainer();
     }
 
     public function testServiceRegistration()
     {
-        $this->assertInstanceOf(OneSignal::class, $this->container->get('onesignal.api'));
+        $this->assertInstanceOf(OneSignal::class, self::$container->get('onesignal.api'));
     }
 
     public function testConfigurationMapping()
@@ -45,6 +36,6 @@ class AdelplaceOneSignalExtensionTest extends KernelTestCase
         $expectedConfig->setApplicationAuthKey('my application auth key');
         $expectedConfig->setUserAuthKey('my user auth key');
 
-        $this->assertEquals($expectedConfig, $this->container->get('onesignal.api')->getConfig());
+        $this->assertEquals($expectedConfig, self::$container->get('onesignal.api')->getConfig());
     }
 }
