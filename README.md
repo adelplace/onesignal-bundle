@@ -1,3 +1,5 @@
+# This project is not maintained anymore
+
 # OneSignal API for Symfony
 
 Symfony integration of the norkunas/onesignal-php-api library
