@@ -11,11 +11,11 @@
     }
   ],
   "require": {
-    "php": "^5.3|^7.1",
-    "symfony/framework-bundle": "^2.8|^3.0|^4.0|^5.0",
+    "php": "^7.2",
+    "symfony/framework-bundle": "^4.0|^5.0",
     "guzzlehttp/guzzle": "^6.3",
-    "php-http/guzzle6-adapter": "^1.1",
-    "norkunas/onesignal-php-api": "^1.2"
+    "php-http/guzzle6-adapter": "^2.0",
+    "norkunas/onesignal-php-api": "^2.0"
   },
   "require-dev": {
     "symfony/phpunit-bridge": "^3.3"
