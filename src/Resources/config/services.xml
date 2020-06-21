@@ -5,31 +5,21 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
         http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="onesignal.guzzle" class="GuzzleHttp\Client" public="false"/>
-        <service id="onesignal.guzzle_message_factory" class="Http\Message\MessageFactory\GuzzleMessageFactory" public="false"/>
-        <service id="onesignal.guzzle_adapter" class="Http\Adapter\Guzzle6\Client" public="false">
-            <argument type="service" id="onesignal.guzzle"/>
-        </service>
-        <service id="onesignal.http_client" class="Http\Client\Common\HttpMethodsClient" public="false">
-            <argument type="service" id="onesignal.guzzle_adapter"/>
-            <argument type="service" id="onesignal.guzzle_message_factory"/>
-        </service>
+        <service id="onesignal.httpClient" class="Symfony\Component\HttpClient\Psr18Client" public="false"/>
+        <service id="onesignal.requestFactory" class="Nyholm\Psr7\Factory\Psr17Factory" public="false"/>
+        <service id="onesignal.streamFactory" class="Nyholm\Psr7\Factory\Psr17Factory" public="false"/>
 
         <service id="onesignal.config" class="OneSignal\Config" public="false">
-            <call method="setApplicationId">
-                <argument>%adelplace_one_signal.application_id%</argument>
-            </call>
-            <call method="setApplicationAuthKey">
-                <argument>%adelplace_one_signal.application_auth_key%</argument>
-            </call>
-            <call method="setUserAuthKey">
-                <argument>%adelplace_one_signal.user_auth_key%</argument>
-            </call>
+            <argument>%adelplace_one_signal.application_id%</argument>
+            <argument>%adelplace_one_signal.application_auth_key%</argument>
+            <argument>%adelplace_one_signal.user_auth_key%</argument>
         </service>
 
         <service id="onesignal.api" class="OneSignal\OneSignal" public="true">
             <argument type="service" id="onesignal.config"/>
-            <argument type="service" id="onesignal.http_client"/>
+            <argument type="service" id="onesignal.httpClient"/>
+            <argument type="service" id="onesignal.requestFactory"/>
+            <argument type="service" id="onesignal.streamFactory"/>
         </service>
     </services>
 </container>

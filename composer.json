@@ -12,10 +12,12 @@
   ],
   "require": {
     "php": "^5.3|^7.1",
-    "symfony/framework-bundle": "^2.8|^3.0|^4.0",
     "guzzlehttp/guzzle": "^6.3",
+    "norkunas/onesignal-php-api": "^2.1",
+    "nyholm/psr7": "^1.3",
     "php-http/guzzle6-adapter": "^1.1",
-    "norkunas/onesignal-php-api": "^1.2"
+    "symfony/framework-bundle": "^2.8|^3.0|^4.0",
+    "symfony/http-client": "^5.1"
   },
   "require-dev": {
     "symfony/phpunit-bridge": "^3.3"
