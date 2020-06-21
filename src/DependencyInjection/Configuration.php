@@ -22,8 +22,9 @@ final class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('adelplace_one_signal');
+        $treeBuilder = new TreeBuilder('adelplace_one_signal');
+        $rootNode = $treeBuilder->getRootNode();
+
         $rootNode
             ->children()
                 ->scalarNode('application_id')
